@@ -9,8 +9,10 @@ import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVInstallation;
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.PushService;
 import com.longney.event.LoginFinishEvent;
 import com.longney.ui.MainActivity;
+import com.longney.ui.PushActivity;
 import com.longney.utils.Logger;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -52,6 +54,8 @@ public class MyApplication extends Application {
 		} else {
 			Logger.level = Logger.NONE;
 		}
+		PushService.setDefaultPushCallback(this, PushActivity.class);
+		PushService.subscribe(this, "public", PushActivity.class);
 	}
 	
 	  public static void goMainActivityFromActivity(Activity fromActivity) {

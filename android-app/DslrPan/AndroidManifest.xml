@@ -32,23 +32,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity android:name="com.avoscloud.chat.ui.entry.EntryLoginActivity" 
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.avoscloud.chat.ui.entry.EntryLoginActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.longney.ui.entry.EntryRegisterActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.longney.ui.entry.RegisterSuccessActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.longney.ui.entry.RetrievePasswordActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.longney.ui.entry.EntryResetPasswordActivity"
-            android:screenOrientation="portrait"/>
-         <activity android:name="com.longney.ui.entry.EntryUpdatePasswordActivity"
-            android:screenOrientation="portrait"/>
-          <activity android:name="com.longney.ui.entry.EntryLoginActivity"
-            android:screenOrientation="portrait"/>
-         <activity android:name="com.longney.ui.MainActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.longney.ui.entry.RegisterSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.entry.RetrievePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.entry.EntryResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.entry.EntryUpdatePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.entry.EntryLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.longney.ui.PushActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.avos.avoscloud.PushService"
+            android:exported="true" />
+
+       <!--   <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        -->
     </application>
 
 </manifest>

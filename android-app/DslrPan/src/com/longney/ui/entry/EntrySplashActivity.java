@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Window;
 
 import com.avos.avoscloud.AVUser;
 import com.longney.dslrpan.R;
@@ -49,6 +50,7 @@ public class EntrySplashActivity extends BaseActivity {
   protected void onCreate(Bundle savedInstanceState) {
     // TODO Auto-generated method stub
     super.onCreate(savedInstanceState);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);
     setContentView(R.layout.activity_splash);
     if (AVUser.getCurrentUser() != null) {
       UserService.updateUserInfo();

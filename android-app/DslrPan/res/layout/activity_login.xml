@@ -23,7 +23,7 @@
                 android:layout_height="@dimen/base_action_bar_height"
                 android:background="@drawable/common_edittext_bg"
                 android:drawableLeft="@drawable/login_user_icon"
-                android:drawablePadding="15dip"
+                android:drawablePadding="10dip"
                 android:hint="@string/login_userphone_hint"
                 android:singleLine="true"
                 android:textColorHint="#a9a9a9" >
@@ -44,7 +44,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/common_edittext_bg"
                 android:drawableLeft="@drawable/login_password_icon"
-                android:drawablePadding="15dip"
+                android:drawablePadding="10dip"
                 android:hint="@string/login_password_hint"
                 android:inputType="textPassword"
                 android:singleLine="true"
@@ -58,6 +58,7 @@
             android:layout_margin="@dimen/activity_vertical_margin"
             android:layout_marginTop="20dp"
             android:gravity="center"
+            android:background="@drawable/boyue_red_bg_selector"
             android:text="@string/login"
             android:textColor="#ffffff"
             android:textSize="28sp" />
@@ -78,7 +79,7 @@
             android:layout_weight="1"
             android:gravity="left"
             android:text="@string/register_rightnow"
-            android:textColor="#000"
+            android:textColor="#72c0f2"
             android:textSize="20sp" />
 
         <TextView
@@ -89,7 +90,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/forget_password"
-            android:textColor="#000"
+            android:textColor="#72c0f2"
             android:textSize="20sp" />
     </LinearLayout>
 

@@ -19,6 +19,7 @@ import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.RequestMobileCodeCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.avos.avoscloud.UpdatePasswordCallback;
 import com.longney.dslrpan.R;
 import com.longney.model.avobject.MyUser;
 import com.longney.service.PreferenceMap;
@@ -153,11 +154,13 @@ public class EntryRegisterActivity extends EntryBaseActivity implements View.OnC
 	}
 
 	private void signup(final String phoneNum, final String password) {
-		mUser.setPassword(password);
+//		mUser.setPassword(password);
 		mUser.setInstallationID(AVInstallation.getCurrentInstallation().getInstallationId()); // 保存设备号
-		mUser.signUpInBackground(new SignUpCallback() {
+		mUser.updatePasswordInBackground("123456", password, new UpdatePasswordCallback() {
+			
 			@Override
 			public void done(AVException e) {
+				// TODO Auto-generated method stub
 				if (filterException(e)) {
 					Utils.toast(R.string.registerSucceed);
 					Utils.goActivity(ctx, RegisterSuccessActivity.class);

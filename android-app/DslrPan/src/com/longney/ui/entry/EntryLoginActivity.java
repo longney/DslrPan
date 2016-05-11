@@ -62,7 +62,7 @@ public class EntryLoginActivity extends EntryBaseActivity implements OnClickList
 			login();
 			break;
 		case R.id.btn_forget_password:
-//			Utils.goActivity(ctx, RetrievePasswordActivity.class);
+			Utils.goActivity(ctx, RetrievePasswordActivity.class);
 			break;
 		default:
 			break;
